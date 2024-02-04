@@ -1,24 +1,18 @@
 document.getElementById('user-input-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    var userInput = document.getElementById('user-input').value;
-    var chatbox = document.getElementById('chatbox');
-    chatbox.innerHTML += '<p>You: ' + userInput + '</p>';
-
-    // Send a request to your server-side application
+  
+    const userInput = document.getElementById('user-input').value;
+  
     fetch('/get-response', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ text: userInput }),
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ text: userInput })
     })
     .then(response => response.json())
     .then(data => {
-        chatbox.innerHTML += '<p>AI: ' + data.response + '</p>';
+      document.getElementById('ai-response').innerText = data.response;
     })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-    document.getElementById('user-input').value = '';
-});
+    .catch(error => console.error('Error:', error));
+  });

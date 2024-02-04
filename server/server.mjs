@@ -13,12 +13,13 @@ const __dirname = dirname(__filename);
 
 const app = express();
 app.use(bodyParser.json());
-
-// Serve static files from the client directory
 app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static('../client'));
 
 app.post('/get-response', async (req, res) => {
     const userInput = req.body.text;
+
+    console.log(process.env.OPENAI_API_KEY); // Add this line here
 
     try {
         const response = await axios.post('https://api.openai.com/v1/engines/davinci-codex/completions', {
@@ -31,7 +32,10 @@ app.post('/get-response', async (req, res) => {
             }
         });
 
-        const aiResponse = response.data.choices[0].text.trim();
+        let aiResponse = '';
+        if (response.data.choices && response.data.choices[0] && response.data.choices[0].text) {
+            aiResponse = response.data.choices[0].text.trim();
+        }
         res.json({ response: aiResponse });
     } catch (error) {
         console.error(error);
