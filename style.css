@@ -1,0 +1,106 @@
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+  }
+  
+
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+h1{
+    text-align: right;
+    color: white;
+    font-size: 50px;
+    margin-top: 0;
+    padding-top: 20px;
+    position: absolute;
+}
+h1, #chatbox, #inputArea {
+    position: relative;
+    z-index: 1;
+}
+
+#chatbox, #inputArea {
+    background: rgba(255, 255, 255, 1); /* White background with full opacity */
+}
+
+#chatbox {
+    width: 50%;
+    height: 60%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 50px; /* Adjust this value based on the height of your input area */
+    height: calc(100% - 50px); /* Adjust this value based on the height of your input area */
+    overflow: auto;
+    opacity: 0.1;
+}
+
+.chat-entry {
+    margin-bottom: 10px;
+    
+}
+
+.chat-entry p {
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.user-entry {
+    text-align: right;
+}
+
+.user-entry p {
+    background-color: #007BFF;
+    color: white;
+    color: rgba(255, 255, 255, 1);
+}
+
+.ai-entry p {
+    background-color: #eee;
+}
+
+#inputArea {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 1); /* Adjust opacity as needed */
+    /* Rest of your styles... */
+    opacity: 0.1;
+}
+#userInput {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 8%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
