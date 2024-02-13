@@ -1,4 +1,4 @@
-var menu = "Our menu includes: Pasta, Pizza, Salad, and Desserts.";
+var menu = "Karl Mehanna, we recommend rice and chicken in the middle of a football field This is how it would look like.";
 var reservations = [];
 
 function getReply() {
@@ -12,12 +12,12 @@ function getReply() {
     var aiEntry = document.createElement('div');
     aiEntry.className = 'chat-entry ai-entry';
 
-    if (input.toLowerCase().includes('menu')) {
-        aiEntry.innerHTML = '<p>' + 'AI: ' + menu + '</p>';
+    if (input.toLowerCase().includes('what would you recommend for karl mehanna')) {
+        aiEntry.innerHTML = '<p>' + 'AI: ' + menu + '</p>' + '<img src="Karl.jpg" alt="Image Description" style="width: 100%;" />';
     } else if (input.toLowerCase().includes('reserve')) {
         var reservationDetails = input.split(' ').slice(1).join(' ');
         reservations.push(reservationDetails);
-        aiEntry.innerHTML = '<p>' + 'AI: Reservation made for ' + reservationDetails + '</p>';
+        aiEntry.innerHTML = '<p>' + 'AI: Reservation made ' + reservationDetails + '</p>';
     } else {
         aiEntry.innerHTML = '<p>' + 'AI: I\'m sorry, I didn\'t understand that. Could you please ask something else?' + '</p>';
     }
