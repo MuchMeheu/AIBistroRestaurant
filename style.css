@@ -2,6 +2,13 @@ body, html {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
     position: absolute;
@@ -28,16 +35,20 @@ body, html {
     font-weight: bold;;
     opacity: 0.5;
     */
-h1{
+h1 {
     position: fixed;
     right: 0;
     top: 0;
     transform: translateX(47%) translateY(-18%);
-    font-size:920%;
+    font-size: 120px;
     text-align: left;
-    font-family: 'varino';
+    font-family: Arial, Helvetica, sans-serif;
     opacity: 0.5;
-    color: blue;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, blue, lightblue, rgb(0, 225, 255), rgb(42, 247, 185) );
+    background-size: 150% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s ease infinite;
 }
 h1, #chatbox, #inputArea {
     position: relative;
@@ -47,6 +58,7 @@ h1, #chatbox, #inputArea {
 #chatbox, #inputArea {
     background: rgba(255, 255, 255, 1); /* White background with full opacity */
 }
+
 
 #chatbox {
     width: 45%;
@@ -62,6 +74,10 @@ h1, #chatbox, #inputArea {
     bottom: 50px; /* Adjust this value based on the height of your input area */ /* Adjust this value based on the height of your input area */
     overflow: auto;
     opacity: 0.6;
+    background-image: url('aibistro.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
 }
 
 .chat-entry {
