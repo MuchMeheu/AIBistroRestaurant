@@ -48,7 +48,7 @@ h1 {
     background-size: 150% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 3s ease infinite;
+    animation: gradient 5s ease infinite;
 }
 h1, #chatbox, #inputArea {
     position: relative;
