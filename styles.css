@@ -1,0 +1,38 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+  }
+  
+  .header .logo {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .site-title {
+    margin: 0;
+    color: #333;
+    font-size: 2em;
+  }
+  
+  .image-bar {
+    background-image: url('karl.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 900px; /* Adjust this value to control the height of the image bar */
+    width: 100%;
+  }
+  
+  .text-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Rest of the styles */
+  
