@@ -1,38 +1,134 @@
-body, html {
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated font family */
+    height: 100%; /* Ensures the body takes up full viewport height */
+    background: linear-gradient(270deg, #3498db, #9b59b6, #e74c3c); /* Example colors */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite; /* Adjust time as needed */
   }
   
   .header {
     text-align: center;
     padding: 20px;
-    background: #ffffff;
+    background: linear-gradient(270deg, #3498db, #9b59b6, #e74c3c); /* Example gradient colors */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated font family */
   }
   
   .header .logo {
-    max-width: 100px;
+    max-width: 400px;
     height: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .logo {
+      width: 150px; /* Larger size for desktop */
+    }
   }
   
   .site-title {
     margin: 0;
     color: #333;
-    font-size: 2em;
+    font-size: 9em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated font family */
   }
   
   .image-bar {
-    background-image: url('karl.jpg');
+    background-image: url('img/restaurant.jpg');
     background-size: cover;
     background-position: center center;
     height: 900px; /* Adjust this value to control the height of the image bar */
-    width: 100%;
+    width: 90%;
+    margin-left: auto; /* Centers the div horizontally */
+    margin-right: auto; /* Centers the div horizontally */
   }
   
   .text-content {
     padding: 20px;
     text-align: center;
+    font-size: 2em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated font family */
   }
   
   /* Rest of the styles */
   
+  .carousel {
+    position: relative;
+    max-width: 600px; /* Adjust as necessary */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    display: none; /* Hide all images initially */
+  }
+  
+  .carousel-images img.active {
+    display: block; /* Only show the active image */
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Updated font family */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.1); /* Make the button grow */
+    background-color: #0056b3; /* Change background color on hover */
+  }
+
+
+  #container3d {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+

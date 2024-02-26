@@ -1,0 +1,23 @@
+{
+  "name": "aibistrorestaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "serve": "vite preview"
+},
+
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "vite": "^5.1.4"
+  }
+}

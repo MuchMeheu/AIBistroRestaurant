@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Bistro</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bistro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 
 <header class="header">
-  <img src="aibistro.png" alt="AI Bistro Logo" class="logo">
+  <img src="img/aibistro.png" alt="AI Bistro Logo" class="logo">
   <h1 class="site-title">AI Bistro</h1>
 </header>
-          
+
+<div class="text-content">
+    <h2>Welcome to my Bistro</h2>
+    <p>Enjoy a fully catered experience where you don’t need to choose what to eat because we know what you really want at the exact moment of your registration. With the addition of the food chosen by AI, you have an interesting, relaxing, fun experience depending on how you feel thanks to our screens' ambience and scent all around you during your 1 hour experience.</p>
+    <a href="chat.html" class="button">Chat With the Ai</a>
+  </div>
+      
 <div class="image-bar">
     <!-- The image is set as a background in CSS -->
   </div>
   
   <div class="text-content">
-    <h2>Welcome to Our Bistro</h2>
-    <p>Enjoy the finest culinary experiences with our freshly prepared dishes, sourced from local ingredients and served with passion.</p>
-    <a href="#menu" class="btn">Explore Our Menu</a>
+    <p>Here are some of the dishes you may get while dining.</p>
+
   </div>
-  
-  <!-- Additional sections here -->
-  
-  </body>
-  </html>
+
+<div class="carousel">
+    <div class="carousel-images">
+      <img src="foods/istockphoto-178503913-612x612.jpg" alt="Food 1">
+      <img src="foods/licensed-image.jpg" alt="Food 2">
+      <img src="foods/portion-bolognese-pasta-on-white-260nw-2093151373.jpg" alt="Food 3">
+      <!-- Add more images as needed -->
+    </div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+
+  <br><br><br><br><hr>
+
+  <div class="text-content">
+
+    <p>Have a look at the rooms you will dining in.</p>
+
+  </div>
+
+
+  <div id="container3d"></div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
