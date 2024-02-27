@@ -48,10 +48,10 @@
   }
   
   .image-bar {
-    background-image: url('img/restaurant.jpg');
+    background-image: url('img/Untitled\(1\).png');
     background-size: cover;
     background-position: center center;
-    height: 900px; /* Adjust this value to control the height of the image bar */
+    height: 950px; /* Adjust this value to control the height of the image bar */
     width: 90%;
     margin-left: auto; /* Centers the div horizontally */
     margin-right: auto; /* Centers the div horizontally */
